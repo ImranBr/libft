@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibarbouc <ibarbouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/07 00:16:09 by ibarbouc          #+#    #+#             */
-/*   Updated: 2025/03/07 17:46:12 by ibarbouc         ###   ########.fr       */
+/*   Created: 2025/03/07 17:27:53 by ibarbouc          #+#    #+#             */
+/*   Updated: 2025/03/07 17:47:41 by ibarbouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Alloue (avec malloc(3)) et renvoie un nouvel élément. La variable membre 
-// ’content’ est initialisée à l’aide de la valeur du paramètre ’content’. 
-// La variable ’next’ est initialisée à NULL.
+//Renvoie le dernier élément de la liste
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*new;
-
-	new = malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	if (lst == NULL)
+		return (0);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

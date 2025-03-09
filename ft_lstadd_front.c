@@ -6,9 +6,11 @@
 /*   By: ibarbouc <ibarbouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 03:09:44 by ibarbouc          #+#    #+#             */
-/*   Updated: 2025/03/07 03:09:48 by ibarbouc         ###   ########.fr       */
+/*   Updated: 2025/03/07 17:46:40 by ibarbouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// Ajoute l’élément ’new’ au début de la liste.
 
 #include "libft.h"
 
